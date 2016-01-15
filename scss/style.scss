@@ -8,16 +8,22 @@
 
 html{
 	font-size: 14px;
+	color: $gray-base;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 .wrapper{
+
 	width:500px;
 	margin: 0 auto;
-	background-color: #FFF;
+	background-color: $light-base;
 }
 
 .container{
 	width:450px;
+	margin:0 auto;
 }
 
 .heading{
@@ -36,5 +42,227 @@ html{
 
 	&--date{
 		@include font(11px,normal,$gray);
+	}
+}
+
+.user{
+
+	@include margin-vertical(0, 15px);
+	
+	&__main{
+		@include margin-vertical(0, 5px);
+	}
+
+	&__img{
+
+		height: 120px;
+		width: 120px;
+		background: url(../images/face.jpg) no-repeat center center;
+		background-size: cover;
+		border-radius:50%;
+		display: inline-block;
+		vertical-align: top;
+		@include margin-horizontal(-40px, 0);
+		position: relative;
+		z-index:1;
+		
+	}
+
+	&__data{
+		display: inline-block;
+		vertical-align: top;
+		width:366px;
+		@include padding-vertical(9px, 0);
+	}
+
+	&__name{
+
+		@include margin-vertical(0, 11px);
+	}
+
+	&__position{
+
+		@include margin-vertical(0, 10px);
+	}
+
+	&__info{
+		@include margin-horizontal(0,49px);
+	}
+
+	&__msg{
+		background-color: $brand-primary;
+		border: 1px solid $gray-light;
+		border-radius: 3px;
+		@include padding-custom(15px, 15px, 13px, 49px);
+		
+	}
+
+	&__stats{
+		@include margin-horizontal(0,135px);
+	}
+
+	&__table{
+		font-size: 13px;
+	}
+
+	&--expression{
+		font-weight: bold;
+	}
+
+	&__row{
+
+		&-control{
+
+			@include margin-vertical(0,2px);
+
+			&--border{
+				border-bottom:1px solid $gray-lighter;
+			}
+			
+		}
+	}
+
+	&__cell{
+		&-control{
+			@include padding-custom(6px, 0 , 8px, 6px)
+			
+			&--heading{
+				width: 220px;
+				border-left:1px solid;
+			}
+
+			&--number{
+				width: 100px;
+				text-align: center;
+			}
+		}
+	}
+
+	&__total{
+		font-size: 16px;
+		font-weight: bold;
+	}
+}
+
+.reviews{
+	&__info{
+		@include margin-vertical(0, 20px);
+	}
+
+	&__heading{
+		margin:0;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__all{
+		display: inline-block;
+		vertical-align: top;
+		color: $brand-hello;
+		animation: color .3s ease-out;
+		
+		&:hover,
+		&:focus{
+			color: lighten($brand-hello,10%);
+		}
+	}
+
+	&__stats{
+		float:right;
+	}
+
+	&__likes{
+		@include padding-horizontal(0,20px);
+		position: relative;
+		&:before{
+			content:"";
+			display: block;
+			width: 12px;
+			height: 10px;
+			background: url(../images/sprite.png) 0 0;
+			position: absolute;
+			left: 0;
+    		top: 3px;
+		}
+	}
+
+	&__quantity{
+		@include padding-horizontal(0,20px);
+		position: relative;
+		&:before{
+			content:"";
+			display: block;
+			width: 13px;
+			height: 13px;
+			background: url(../images/sprite.png) -16px 0;
+			position: absolute;
+			left: 0;
+    		top: 3px;
+		}
+	}
+
+	&__item{
+		@include margin-vertical(0,20px);
+	}
+
+	&__name{
+		display: inline-block;
+		margin:0;
+		
+	}
+
+	&__date{
+		display: inline-block;
+		margin:0;
+	}
+
+	&__message{
+		background-color: $brand-primary;
+		border:1px solid $gray-lightest;
+		@include padding-custom(20px, 20px, 18px, 20px);
+		@include margin-vertical(9px,0);
+		position: relative;
+		&:before{
+			content:"";
+			display: block;
+			height: 10px;
+			width: 9px;
+			background: url(../images/sprite.png) -38px -1px;
+		    position: absolute;
+		    top: -8px;
+		    left: 17px;
+		}
+	}
+
+	
+}
+
+.submit{
+	
+	background-color: $brand-danger;
+	@include padding-vertical(30px, 35px);
+	
+
+	&__textarea{
+		display: block;
+		border: 1px solid $gray-dark;
+		background-color: $light-base;
+		width: 100%;
+		@include margin-vertical(0, 23px);
+	}
+
+	&__btn{
+		display: block;
+		margin:0 auto;
+		background-color: $brand-happy;
+		border:none;
+		border-radius:10px;
+		@include padding-custom(15px,60px, 16px, 60px);
+		font-family: $font-family-rare;
+		@include font(16px,bold,$gray-base)
+		
+		&:focus{
+			outline:none;
+		}
 	}
 }

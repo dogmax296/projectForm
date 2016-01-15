@@ -1,25 +1,26 @@
 // FONT FAMILY
 $font-family-main:          Arial, Helvetica, sans-serif;
+$font-family-rare:          'PT Sans',$font-family-main;
 
 
 
 // COLORS
-$gray-base:                 #333333; //base text color
+$light-base:                #fff;
+$gray-base:                 #333; //base text color
 $gray-dark:                 #a9a9a9; //border new comment
 $gray:                      #808080; //subtext heading
 $gray-light:                #cecabf; //user message border
-$gray-lighter:              #cccccc; //border-color skils
+$gray-lighter:              #ccc; //border-color skils
 $gray-lightest:             #cfcfcf; //border-color comments
 
-$brand-primary:             #fffbc8; //user message color
+$brand-primary:             #f2fbff; //user message bg color
 $brand-success:             #b1e19b; //green color
 $brand-info:                #ace2f8; //blue color
 $brand-warning:             #005da1; //darkblue color
-$brand-danger:              #73b4d5; //likes blue color
-$brand-walk:                #f2fbff; //comments blue color
 $brand-happy:               #fdd639; //btn color
 $brand-rain:                #cfcfcf; //new comment bg
 $brand-hello:               #005da1; //all reviews link
+$brand-danger:              #f2f2f2; //submit bg
 
 
 // MEDIA QUeries breakpoints
