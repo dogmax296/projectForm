@@ -1,0 +1,40 @@
+
+// VARIABLES AND MIXINS
+@import "style/variables.scss";
+@import "style/mixins.scss";
+
+// NORMALIZE
+@import "style/normalize.scss";
+
+html{
+	font-size: 14px;
+}
+
+.wrapper{
+	width:500px;
+	margin: 0 auto;
+	background-color: #FFF;
+}
+
+.container{
+	width:450px;
+}
+
+.heading{
+	
+	&--main{
+		@include font(16px,bold,$gray-base);
+	}
+
+	&--sub{
+		@include font(12px,normal,$gray);
+	}
+
+	&--name{
+		@include font(14px,bold,$gray-base);
+	}
+
+	&--date{
+		@include font(11px,normal,$gray);
+	}
+}
